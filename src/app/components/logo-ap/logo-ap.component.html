@@ -1,0 +1,20 @@
+<div class="row">
+    <div class="container">
+        <div class="logo">
+            <img src="../../../assets/images/logoAP.jpg" alt="logoargentinaprograma" id="logo-arg">
+        </div>
+        <div class="redes">
+            <a href="https://www.twitter.com/_ivanvk_" target="_blank" rel="noreferrer nooponer">
+            <img src="../../../assets/images/logoTw.png" alt="logoTwitter" class="logo-rs">
+            </a>
+            <a href="https://www.github.com/ivanvk86" target="_blank" rel="noreferrer nooponer">
+            <img src="../../../assets/images/logoGithub.png" alt="logogithub" class="logo-rs">
+            </a>
+            <a href="" target="_blank" rel="noreferrer nooponer">
+            <img src="" alt="" class="logo-rs">
+            </a>
+            <button type="button" class="btn btn-outline-light" (click)="login()" *ngIf="!isLogged">INGRESO</button>
+            <button type="button" class="btn btn-outline-light" (click)="onLogOut()" *ngIf="isLogged">CERRAR SESIÓN</button>
+        </div>
+    </div>
+</div>

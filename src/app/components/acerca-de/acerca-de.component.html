@@ -1,0 +1,46 @@
+<div id="info" style="padding:16px">
+  <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+    <img id="profile-image" src="../../../assets/images/foto_perfil_1.jpg" alt="profile_pic">
+    <div class="btn-edit"><a href="#" class="btn-right"><i class="fas fa-pen"></i></a></div>  
+    <h2>{{persona.nombre}} {{persona.apellido}}</h2>                                       
+  </div>
+  <div id="info-data" class="col-xs-12 col-sm-8 col-md-8 col-lg-8">      
+    <div id="info-contact">
+        <span>Desarrollador Full Stack Jr</span>
+    
+        <span>Rosario, Argentina</span>
+
+        <span><a href="#">Información de contacto</a></span>
+    </div>
+      <ul id="info-details">
+        <li><a href="#"></a>
+          <img src="">
+          <h4>FCA</h4></li>
+        <li><a href="#"></a>
+          <img src="">
+          <h4>FCA</h4></li>
+      </ul>
+    </div>
+</div>
+<div id="info-actions">
+  <button type="button" class="btn btn-primary">Tengo interés en</button>
+  <button type="button" class="btn btn-light">Añadir sección</button>
+<div class="card">
+    <div class="card-titles">
+      <h3>Acerca de</h3>
+      <div class="btn-edit" onclick="cambiar_parrafo()">
+        <a href="#" class="btn-right">
+          <i class="fas fa-pen"></i>
+        </a>
+      </div>
+    </div>
+    <div>
+      <p id="text-acercade">Diletante</p>
+    </div>
+    <div>
+      <input id="edit-acercade" type="text" oninput="mostrar_texto(this.value)" style="display:none">
+    </div>
+  </div>
+  <div>
+    <input type="file" id="file1" onchange="showFile(this)">
+  </div>

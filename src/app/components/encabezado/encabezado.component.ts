@@ -1,19 +1,23 @@
 import { Component, OnInit } from '@angular/core';
-import { PorfolioService } from 'src/app/servicios/porfolio.service';
+/*import { PortafolioService } from 'src/app/services/portafolio.service';*/
 
 @Component({
   selector: 'app-encabezado',
   templateUrl: './encabezado.component.html',
   styleUrls: ['./encabezado.component.scss']
 })
-export class EncabezadoComponent implements OnInit {
+export class EncabezadoComponent {
+
+}
+/*export class EncabezadoComponent implements OnInit {
   miPorfolio:any;
-  constructor(private datosPorfolio:PorfolioService){}
+  constructor(private datosPorfolio:PortafolioService){}
 
     ngOnInit(): void{
-      this.datosPorfolio.obtenerDatos().subscribe(data => {
+      this.datosPorfolio.obtenerDatosAcercaDe().subscribe(data => {
         console.log(data);
         this.miPorfolio=data;
       });
     }
   }
+*/
