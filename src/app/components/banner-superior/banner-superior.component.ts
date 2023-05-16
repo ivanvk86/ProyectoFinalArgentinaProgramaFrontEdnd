@@ -8,8 +8,11 @@ import Swal from 'sweetalert2';*/
   templateUrl: './banner-superior.component.html',
   styleUrls: ['./banner-superior.component.scss']
 })
-export class BannerSuperiorComponent {
-
+export class BannerSuperiorComponent implements OnInit {
+    constructor(){}
+      ngOnInit(): void{
+      
+      }
 }
 /*export class BannerSuperiorComponent implements OnInit {
 
