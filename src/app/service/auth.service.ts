@@ -1,22 +1,28 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { NuevoUsuario } from '../model/nuevo-usuario';
 import { Observable } from 'rxjs';
-import { LoginUsuario } from '../model/login-usuario';
+import { environment } from 'src/environments/environment';
 import { JwtDto } from '../model/jwt-dto';
+import { LoginUsuario } from '../model/login-usuario';
+import { NuevoUsuario } from '../model/nuevo-usuario';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  authURL = 'http://localhost:8080/auth/'
+<<<<<<< HEAD
+  authURL = 'https://backend-ivk.herokuapp.com/auth/';
+=======
+  URL = environment.URL + 'auth/';
+>>>>>>> dbccedd5c18384aa757cbb7ab7d9f7f3bc0e7672
+
   constructor(private httpClient: HttpClient) { }
 
-  public nuevo(nuevoUsuario: NuevoUsuario):Observable<any>{
-    return this.httpClient.post<any>(this.authURL + 'nuevo', nuevoUsuario);
-  }
+ public nuevo(nuevoUsuario: NuevoUsuario): Observable<any>{
+   return this.httpClient.post<any>(this.URL + 'nuevo', nuevoUsuario);
+ }
 
-  public login(loginUsuario: LoginUsuario): Observable<JwtDto>{
-    return this.httpClient.post<JwtDto>(this.authURL + 'login', loginUsuario)
-  }
+ public login(loginUsuario: LoginUsuario): Observable<JwtDto>{
+   return this.httpClient.post<JwtDto>(this.URL + 'login', loginUsuario)
+ }
 }
