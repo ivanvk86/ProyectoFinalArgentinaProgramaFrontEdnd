@@ -15,12 +15,15 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
 import { HysComponent } from './components/hys/hys.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { interceptorProvider } from './service/interceptor-service';
-import { EducacionComponent } from './educacion/educacion.component';
-import { NewEducacionComponent } from './components/new-educacion/new-educacion.component';
-import { NeweducacionComponent } from './components/neweducacion/neweducacion.component';
-import { EditeducacionComponent } from './components/editeducacion/editeducacion.component';
-import { EditSkillComponent } from './components/edit-skill/edit-skill.component';
-import { NewSkillComponent } from './components/new-skill/new-skill.component';
+import { EducacionComponent } from '../app/components/educacion/educacion.component';
+import { NeweducacionComponent } from '../app/components/educacion/neweducacion.component'
+import { EditeducacionComponent } from '../app/components/educacion/editeducacion.component';
+import { EditSkillComponent } from '../app/components/hys/edit-skill.component';
+import { NewSkillComponent } from '../app/components/hys/new-skill.component';
+import { EditAcercaDeComponent } from './components/acerca-de/edit-acerca-de/edit-acerca-de.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideStorage,getStorage } from '@angular/fire/storage';
 
 @NgModule({
   declarations: [
@@ -34,11 +37,12 @@ import { NewSkillComponent } from './components/new-skill/new-skill.component';
     HysComponent,
     FooterComponent,
     EducacionComponent,
-    NewEducacionComponent,
+    NeweducacionComponent,
     NeweducacionComponent,
     EditeducacionComponent,
     EditSkillComponent,
-    NewSkillComponent
+    NewSkillComponent,
+    EditAcercaDeComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +50,9 @@ import { NewSkillComponent } from './components/new-skill/new-skill.component';
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
-    NgCircleProgressModule.forRoot({})
+    NgCircleProgressModule.forRoot({}),
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideStorage(() => getStorage())
   ],
   providers: [
     interceptorProvider

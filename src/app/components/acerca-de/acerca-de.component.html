@@ -1,7 +1,9 @@
 <div id="info" style="padding:16px">
+    <button type="button" class="btn btn-primary" routerLink="/editacercade/1" *ngIf="isLogged">
+        Editar Persona
+    </button>
   <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-    <img id="profile-image" src="../../../assets/images/foto_perfil_1.jpg" alt="profile_pic">
-    <div class="btn-edit"><a href="#" class="btn-right"><i class="fas fa-pen"></i></a></div>  
+    <img id="profile-image" src={{persona.img}} alt="profile_pic"> 
     <h2>{{persona.nombre}} {{persona.apellido}}</h2>                                       
   </div>
   <div id="info-data" class="col-xs-12 col-sm-8 col-md-8 col-lg-8">      
@@ -35,7 +37,7 @@
       </div>
     </div>
     <div>
-      <p id="text-acercade">Diletante</p>
+      <p id="text-acercade">{{persona.descripcion}}</p>
     </div>
     <div>
       <input id="edit-acercade" type="text" oninput="mostrar_texto(this.value)" style="display:none">
